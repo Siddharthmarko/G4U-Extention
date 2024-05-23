@@ -1,0 +1,22 @@
+{
+    "name": "Through google image",
+    "version": "1.0.0",
+    "description": ".........",
+    "manifest_version": 3,
+    "author": "Siddharth",
+    "permissions": ["tabs", "webNavigation"],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Leetcode"
+    }, 
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+      },
+      "content_scripts": [
+        {
+          "matches": ["https://www.google.com/*"],
+          "js": ["content.js"]
+        }
+      ]
+}
